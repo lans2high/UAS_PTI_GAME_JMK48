@@ -1,0 +1,31 @@
+.minimap-container {
+  position: fixed; /* FIXED: agar mengambang di layar */
+  top: -270px; /* Jarak dari atas */
+  right: 10px; /* Jarak dari kanan */
+  width: 230px;
+  height: 230px;
+  background-color: #333;
+  border: 2px solid white;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.minimap-point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.minimap-player {
+  background-color: red;
+}
+
+.minimap-radius {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 1px dashed red;
+  border-radius: 50%;
+  opacity: 0.4;
+}

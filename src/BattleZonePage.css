@@ -1,0 +1,264 @@
+/* src/BattleZonePage.css */
+
+/* --- Wadah Utama Halaman --- */
+.battle-zone-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Konten mulai dari atas */
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #1a2a3a; /* Warna dasar yang konsisten */
+  color: #e0e0e0; /* Warna teks default */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Font yang lebih modern */
+  text-align: center; /* Teks default di tengah, bisa di-override elemen anak */
+}
+
+.battle-zone-container h1 {
+  color: #f7b731; /* Warna kuning untuk judul utama */
+  margin-bottom: 10px;
+}
+.battle-zone-container h2 {
+  color: #f7b731; /* Warna kuning untuk sub-judul */
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.battle-zone-container p {
+  color: #bdc3c7; /* Warna abu-abu muda untuk teks paragraf */
+  margin-bottom: 15px;
+}
+
+/* --- Bagian Pemilihan Musuh --- */
+.enemy-selection {
+  width: 100%;
+  max-width: 900px; /* Lebar maksimum untuk daftar musuh */
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.enemy-list {
+  display: flex;
+  flex-wrap: wrap; /* Item akan pindah ke baris baru jika tidak cukup tempat */
+  justify-content: center; /* Pusatkan kartu-kartu musuh */
+  gap: 25px; /* Jarak antar kartu */
+  margin-top: 20px;
+}
+
+.enemy-card {
+  background-color: #2c3e50; /* Latar kartu */
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px; /* Lebar kartu */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.enemy-card:hover {
+  transform: translateY(-5px); /* Efek hover sederhana */
+}
+
+.enemy-card .enemy-img-select {
+  /* Target spesifik untuk gambar di pemilihan */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 3px solid #4a6a8a;
+}
+
+.enemy-card h2 {
+  font-size: 1.3em;
+  margin-bottom: 8px;
+  color: #ecf0f1; /* Warna teks judul kartu */
+}
+
+.enemy-card p {
+  margin: 4px 0;
+  font-size: 0.95em;
+  color: #bdc3c7;
+}
+
+.enemy-card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3498db; /* Biru untuk tombol pilih */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.enemy-card button:hover {
+  background-color: #2980b9;
+}
+
+.enemy-card button:disabled {
+  /* Jika diperlukan, meskipun tidak ada di logika JS Anda saat ini */
+  background-color: #7f8c8d;
+  cursor: not-allowed;
+}
+
+/* --- Area Pertarungan --- */
+.battle-area {
+  display: flex;
+  justify-content: space-around; /* Beri jarak antar pemain dan musuh */
+  align-items: flex-start; /* Sejajarkan dari atas */
+  width: 100%;
+  max-width: 800px; /* Lebar maksimum area battle */
+  margin: 30px 0;
+  gap: 20px; /* Jarak antara display pemain dan musuh */
+}
+
+.combatant-display {
+  /* Styling umum untuk display pemain dan musuh */
+  background-color: #34495e; /* Warna latar untuk display kombatan */
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%; /* Bagi lebar untuk dua kombatan */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.combatant-display .combatant-img {
+  /* Target spesifik untuk gambar di area battle */
+  width: 120px; /* Ukuran gambar yang lebih besar di battle */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* Gambar bulat */
+  margin-bottom: 15px;
+  border: 3px solid #5a88b5;
+}
+
+.combatant-display h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #ecf0f1;
+}
+
+.combatant-display .health-bar {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #e74c3c; /* Warna merah untuk health */
+  margin-bottom: 8px;
+}
+.combatant-display p {
+  /* Paragraf lain di dalam combatant display */
+  margin: 5px 0;
+  color: #bdc3c7;
+}
+
+/* --- Aksi Pertarungan --- */
+.battle-actions {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Jarak antar tombol aksi */
+}
+
+.battle-actions button {
+  padding: 12px 28px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background-color: #2ecc71; /* Hijau untuk aksi positif */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.battle-actions button:hover {
+  background-color: #27ae60;
+}
+
+/* --- Hasil Pertarungan --- */
+.battle-result {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.battle-result h2 {
+  /* Styling default untuk hasil, bisa di-override oleh .win atau .lose */
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: #f7b731; /* Default jika tidak win/lose (seharusnya tidak terjadi) */
+}
+
+.battle-result h2.win {
+  /* Khusus jika menang */
+  color: #2ecc71; /* Hijau terang untuk menang */
+}
+.battle-result h2.lose {
+  /* Khusus jika kalah (class ditambahkan di JS) */
+  color: #e74c3c; /* Merah untuk kalah */
+}
+
+/* Tombol Kembali (Bisa digunakan di beberapa tempat) */
+.return-button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  background-color: #3498db; /* Biru untuk tombol kembali */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.return-button:hover {
+  background-color: #2980b9;
+}
+
+/* --- Log Pertarungan --- */
+.battle-log {
+  width: 100%;
+  max-width: 700px; /* Lebar log */
+  min-height: 120px; /* Tinggi minimal */
+  max-height: 200px; /* Tinggi maksimal sebelum scroll */
+  background-color: #2c3e50; /* Latar log */
+  border: 1px solid #4a6a8a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 25px;
+  overflow-y: auto; /* Scroll jika konten melebihi max-height */
+  text-align: left; /* Teks log rata kiri */
+}
+
+.battle-log h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #f7b731;
+  border-bottom: 1px solid #4a6a8a;
+  padding-bottom: 8px;
+}
+
+.battle-log div {
+  /* Wrapper untuk paragraf log */
+  display: flex;
+  flex-direction: column-reverse; /* Log terbaru di atas */
+}
+
+.battle-log p {
+  margin: 6px 0;
+  font-size: 0.95em;
+  color: #ecf0f1;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed #4a6a8a60; /* Garis putus-putus yang lebih soft */
+}
+.battle-log p:first-child {
+  /* Log paling atas (yang terbaru) tidak perlu border bawah */
+  border-bottom: none;
+}

@@ -1,0 +1,144 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 750px;
+  max-height: 650px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.character-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.nav-button {
+  background-color: #ffffff20;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #ffffff40;
+}
+
+.character-display {
+  margin: 0 1rem;
+}
+
+.character-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  background-color: #333;
+}
+
+.character-name {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #eee;
+}
+
+.character-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+  width: 250px;
+}
+
+.stat-box {
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.select-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #4caf50; /* Warna hijau keren */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.select-button:hover {
+  background-color: #45a049; /* Hijau lebih gelap saat hover */
+  transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+
+.select-button:active {
+  transform: scale(0.98); /* Efek diklik */
+}
+
+.nickname-input {
+  display: block;
+  margin: 20px auto 10px auto;
+  padding: 10px 15px;
+  width: 60%;
+  font-size: 16px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.nickname-input:focus {
+  border-color: #388e3c;
+}
+
+.inventory-button {
+  width: 80%;
+  background-color: gold;
+  border: none;
+  border-radius: 6px 6px 0 0;
+  padding: 6px 0;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
