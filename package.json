@@ -2,11 +2,7 @@
   "name": "react-typescript",
   "version": "1.0.0",
   "description": "React and TypeScript example starter project",
-  "keywords": [
-    "typescript",
-    "react",
-    "starter"
-  ],
+  "keywords": ["typescript", "react", "starter"],
   "main": "src/index.tsx",
   "dependencies": {
     "react": "18.2.0",
@@ -14,10 +10,10 @@
     "react-router-dom": "^7.6.0"
   },
   "devDependencies": {
+    "typescript": "5.8.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.15",
     "@vitejs/plugin-react": "^4.2.1",
-    "typescript": "5.8.3",
     "vite": "^5.0.11"
   },
   "scripts": {
@@ -25,10 +21,5 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
